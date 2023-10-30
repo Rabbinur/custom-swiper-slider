@@ -1,0 +1,21 @@
+import { Icon } from "@iconify/react";
+import React from "react";
+import { useSwiper } from "swiper/react";
+const SwipSlideButton = () => {
+  const swiper = useSwiper();
+  return (
+    <div>
+      {" "}
+      <div className="border-2 border-gray-200 w-fit px-2 py-1 rounded-xl mt-4 space-x-4">
+        <button className=" p-1 rounded-md" onClick={() => swiper.slidePrev()}>
+          <Icon icon="mingcute:arrow-left-fill" width={36} color="#000" />
+        </button>
+        <button className=" p-1 rounded-md" onClick={() => swiper.slideNext()}>
+          <Icon icon="mingcute:arrow-right-fill" width={36} color="#505050" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SwipSlideButton;
